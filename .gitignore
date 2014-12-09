@@ -1,0 +1,13 @@
+bin/
+gen/
+*/.svn
+*.classpath
+*.project
+.settings
+.git/
+lint.xml
+.idea/
+.navigation/
+out/
+*.iml
+local.properties
