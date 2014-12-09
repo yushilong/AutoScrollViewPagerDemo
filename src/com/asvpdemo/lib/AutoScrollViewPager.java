@@ -164,7 +164,8 @@ public class AutoScrollViewPager extends ViewPager {
             }
         } else if (nextItem == totalCount) {
             if (isCycle) {
-                setCurrentItem(0, isBorderAnimation);
+                setCurrentItem(0,false);
+                setCurrentItem(1, isBorderAnimation);//最后一个自然过渡到第一个item
             }
         } else {
             setCurrentItem(nextItem, true);

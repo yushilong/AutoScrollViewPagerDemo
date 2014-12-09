@@ -10,7 +10,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    <com.viewpagerindicator.CirclePageIndicator
+    <com.asvpdemo.AutoScrollViewPagerCirclePageIndicator
             xmlns:pi="http://schemas.android.com/apk/res-auto"
             android:id="@+id/indicator"
             android:layout_width="wrap_content"

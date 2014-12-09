@@ -13,7 +13,7 @@ import java.util.List;
 public class MainActivity extends Activity
 {
     AutoScrollViewPager viewPager;
-    CirclePageIndicator indicator;
+    AutoScrollViewPagerCirclePageIndicator indicator;
     List<Integer> ids = new ArrayList<Integer>();
     List<View> views = new ArrayList<View>();
 
@@ -29,6 +29,7 @@ public class MainActivity extends Activity
 
     private void initData()
     {
+        ids.add(R.drawable.mmaa64034f78f0f736a44895600a55b319ebc41318);//添加最后一张图片在最前面
         ids.add(R.drawable.mm3b292df5e0fe9925b0f1d75936a85edf8db1713d);
         ids.add(R.drawable.mm4e4a20a4462309f75df0f515700e0cf3d7cad61e);
         ids.add(R.drawable.mm55e736d12f2eb9389c4435fbd7628535e5dd6f89);
@@ -43,14 +44,15 @@ public class MainActivity extends Activity
         }
         ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(this, views);
         viewPager.setAdapter(imagePagerAdapter);
+        indicator.setSnap(true);
         indicator.setViewPager(viewPager);
-        viewPager.setInterval(3 * 1000);
+        viewPager.setInterval(2 * 1000);
         viewPager.startAutoScroll();
     }
 
     private void findViews()
     {
         viewPager = (AutoScrollViewPager) findViewById(R.id.viewpager);
-        indicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        indicator = (AutoScrollViewPagerCirclePageIndicator) findViewById(R.id.indicator);
     }
 }
