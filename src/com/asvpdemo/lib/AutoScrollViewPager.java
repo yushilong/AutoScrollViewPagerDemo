@@ -211,7 +211,12 @@ public class AutoScrollViewPager extends ViewPager {
                     getParent().requestDisallowInterceptTouchEvent(false);
                 } else {
                     if (pageCount > 1) {
-                        setCurrentItem(pageCount - currentItem - 1, isBorderAnimation);
+                        if (currentItem==pageCount-1){
+                            setCurrentItem(0,false);
+                            setCurrentItem(1,isBorderAnimation);
+                        }else {
+                            setCurrentItem(pageCount - currentItem - 1, isBorderAnimation);
+                        }
                     }
                     getParent().requestDisallowInterceptTouchEvent(true);
                 }

@@ -44,6 +44,7 @@ public class MainActivity extends Activity
         }
         ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(this, views);
         viewPager.setAdapter(imagePagerAdapter);
+        viewPager.setSlideBorderMode(AutoScrollViewPager.SLIDE_BORDER_MODE_CYCLE);
         indicator.setSnap(true);
         indicator.setViewPager(viewPager);
         viewPager.setInterval(2 * 1000);
